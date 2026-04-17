@@ -1,0 +1,48 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+<app-header></app-header>
+
+<div class="Subscribe-container">
+    <div class="Subscribe-main">
+        <p class="Subscribe-title">Cadastrar</p>
+        <form action="subscribeForm" [formGroup]="subscribeForm" (ngSubmit)="subscribe()" class="Subscribe-form" >
+            <input type="text"
+            formControlName="username"
+            placeholder="Nome"
+            class="Subscribe-input"
+            required>
+            <br>
+            <input type="email"
+            formControlName="email"
+            placeholder="Email"
+            class="Subscribe-input"
+            required>
+            <br>
+            <input type="text"
+            formControlName="birthday"
+            placeholder="Data de nascimento"
+            class="Subscribe-input"
+            required>
+            <br>
+            <input type="text"
+            formControlName="phone"
+            placeholder="Telefone"
+            class="Subscribe-input"
+            required>
+            <br>
+            <input type="password"
+            formControlName="password"
+            placeholder="Senha"
+            class="Subscribe-input"
+            required>
+            <br>
+            <button type="submit" class="Subscribe-button">SALVAR</button>
+            <div class="Subscribe-create">
+                <div>Have an account?</div>
+                <a [routerLink]="['/login']" class="Subscribe-createcount">Login</a>
+            </div>
+        </form>
+    </div>
+</div>

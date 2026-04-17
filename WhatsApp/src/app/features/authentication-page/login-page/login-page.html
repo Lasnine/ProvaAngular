@@ -1,0 +1,28 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+<app-header></app-header>
+
+<div class="login-container">
+    <div class="login-main">
+        <p class="login-title">Entrar</p>
+        <form action="get" class="login-form">
+            <input type="email"
+            placeholder="Email"
+            class="login-input"
+            required>
+            <br>
+            <input type="password"
+            placeholder="Senha"
+            class="login-input"
+            required>
+            <br>
+            <button class="login-button">SALVAR</button>
+            <div class="login-create">
+                <div>Does have an account?</div>
+                <a [routerLink]="['/cadastro']" class="login-createcount">Cadastro</a>
+            </div>
+        </form>
+    </div>
+</div>
